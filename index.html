@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <button type="button" name="button" id="buttonHeight">Bouton 1</button>
+    <button type="button" name="button" id="buttonGreen">Bouton 2</button>
+    <button type="button" name="button" id="buttonResetColor">Bouton 3</button>
+    <button type="button" name="button" id="buttonHide">Bouton 4</button>
+    <button type="button" name="button" id="buttonShow">Bouton 5</button>
+  </form>
+  <div id="rectangle"  style="height: 10px; width: 100px; background-color: black;"></div>
+  <script>
+  // DECLARATION ET INITIALISATION DE LA VARIABLE POUR LA HAUTEUR
+  var height = 10;
+  // BOUTON FONCTION INCREMENTATION 10PX AVEC UN MAX DE 100
+  $('#buttonHeight').click(function(){
+    if(height == 100){
+      height = 10;
+      $('#rectangle').css('height', height + 'px');
+    }else{
+      height += 10;
+      $('#rectangle').css('height', height + 'px');
+    }
+  });
+  // BOUTON FONCTION CHANGEMENT DE COULEUR EN VERT
+  $('#buttonGreen').click(function(){
+    $('#rectangle').css('background-color', 'green');
+  });
+  // BOUTON FONCTION CHANGEMENT DE COULEUR EN NOIR
+  $('#buttonResetColor').click(function(){
+    $('#rectangle').css('background-color', 'black');
+  });
+  // BOUTON FONCTION DISPARAITRE LA DIV #RECTANGLE
+  $('#buttonHide').click(function(){
+    $('#rectangle').hide();
+  });
+  // BOUTON FONCTION FAIRE APPARAITRE LA DIV #RECTANGLE
+  $('#buttonShow').click(function(){
+    $('#rectangle').show();
+  });
+  </script>
+</body>
+</html>
